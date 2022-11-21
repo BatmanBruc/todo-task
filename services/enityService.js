@@ -1,3 +1,4 @@
+import { Types } from "mongoose"
 /**
  * @class
  * Класс для организации и проверки изменения модели
@@ -15,6 +16,12 @@ export class EnityModel{
     constructor(data, id){
         this.data = data
         this.id = id
+    }
+    verify_id(){
+        if(!this.id || !Types.ObjectId.isValid(this.id))
+            return false
+        else
+            return true
     }
     /**
      * Проверяет наличие всех обязательных полей, основываясь на схеме модели, и возращает пропущенные 

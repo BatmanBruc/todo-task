@@ -1,5 +1,6 @@
 export const FIELD_REQUIRED = ['Не заполнены необходимые поле:', 400, 0]
 export const NOT_FOUND_ITEM = ['ПОзиция не найдена:', 400, 1]
+export const BAD_ID = ['Некорректный id:', 400, 2]
 
 export const USER_ALREADY_EXISTS = ['Пользователь с таким никнеймом уже существует:', 400, 'auth_0']
 export const NOT_FOUND_NICKENAME = ['Не найден никнейм', 400, 'auth_1']

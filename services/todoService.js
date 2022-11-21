@@ -1,6 +1,6 @@
 import { EnityModel, EnityRequest } from "./enityService.js"
 import { RejoinError, RejoinSuccess } from "./rejoinService.js"
-import { FIELD_REQUIRED, NOT_FOUND_DOTO_ITEM } from "./errorService.js"
+import { FIELD_REQUIRED, NOT_FOUND_DOTO_ITEM, BAD_ID } from "./errorService.js"
 import TodoItem from '../models/TodoItem.js'
 
 /**
@@ -30,6 +30,13 @@ class TodoEnity extends EnityModel{
      * @returns RejoinError
      */
     async verify_item(){
+        if(!super.verify_id())
+            return new RejoinError({
+                description: BAD_ID[0],
+                content: this.id,
+                status: BAD_ID[1],
+                code: BAD_ID[2]
+            }) 
         const item = await super.verify_item()
         if(item) return item
         else return new RejoinError({

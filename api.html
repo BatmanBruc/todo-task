@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAPi</title>
+</head>
+<body>
+    <h1>POST /auth/register</h1>
+    <ul>
+        <li>nickname</li>
+        <li>password</li>
+        <li>name</li>
+        <li>surname</li>
+    </ul>
+    <h1>POST /auth/login</h1>
+    <ul>
+        <li>nickname</li>
+        <li>password</li>
+    </ul>
+    <h1>POST /todo/list</h1>
+    <h2>Cookie auth_token</h2>
+    <ul>
+        <li>limit?</li>
+        <li>skip?</li>
+    </ul>
+    <h1>POST /todo/create</h1>
+    <h2>Cookie auth_token</h2>
+    <ul>
+        <li>name</li>
+        <li>description?</li>
+    </ul>
+    <h1>POST /todo/:id</h1>
+    <h2>Cookie auth_token</h2>
+    <ul>
+        <li>name</li>
+        <li>description?</li>
+    </ul>
+    <h1>DELETE /todo/:id</h1>
+    <h2>Cookie auth_token</h2>
+</body>
+</html>

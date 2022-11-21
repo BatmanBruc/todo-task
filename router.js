@@ -8,7 +8,7 @@ router.post('/auth/register', auth_register)
 router.post('/auth/login', auth_login)
 
 router.post('/todo/list', user_middleware, todo_get_list)
-router.post('/todo/create', user_middleware, todo_create)
-router.post('/todo/change/:id', user_middleware, todo_change)
-router.post('/todo/delete/:id', user_middleware, todo_delete)
+router.post('/todo', user_middleware, todo_create)
+router.post('/todo/:id', user_middleware, todo_change)
+router.delete('/todo/:id', user_middleware, todo_delete)
 export default router;
