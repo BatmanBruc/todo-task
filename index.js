@@ -16,7 +16,9 @@ app.use('/',cors({
 app.listen(port, () => {
   return console.log(`server is listening on ${port}`);
 });
-
+app.get('/',(req, res)=>{
+  res.send('./api.html')
+})
 runDB().catch(err => console.log(err));
 
 async function runDB() {
